@@ -1,0 +1,13 @@
+[Unit]
+Description=PiCam Recording
+After=picam-rtsp-server.service
+
+[Service]
+User=pi
+ExecStart=/usr/bin/python /home/pi/bin/start-recording.py
+Restart=on-success
+RestartSec=10
+
+
+[Install]
+WantedBy=multi-user.target
