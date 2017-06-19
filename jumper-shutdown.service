@@ -1,0 +1,9 @@
+[Unit]
+Description=Jumper Shutdown Service
+
+[Service]
+User=pi
+ExecStart=/usr/bin/python /home/pi/bin/jumper-shutdown.py
+
+[Install]
+WantedBy=multi-user.target
